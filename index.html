@@ -23,12 +23,25 @@
                 </select>
             </label>
             <br>
-            <label>Valor da Venda: <input type="number" id="valor-venda" required></label><br>
-            <label>IRPF (%): <input type="number" id="irpf" required></label><br>
-            <label>PIS (%): <input type="number" id="pis" required></label><br>
-            <label>COFINS (%): <input type="number" id="cofins" required></label><br>
-            <label>INSS (%): <input type="number" id="inss" required></label><br>
-            <label>ISSQN (%): <input type="number" id="issqn" required></label><br>
+            <label>Valor da Venda:
+                <input type="text" id="valor-venda" required oninput="formatarMoeda(this)">
+            </label><br>
+            <label>IRPF (%):
+                <input type="number" id="irpf" required>
+            </label><br>
+            <label>PIS (%):
+                <input type="number" id="pis" required>
+            </label><br>
+            <label>COFINS (%):
+                <input type="number" id="cofins" required>
+            </label><br>
+            <label>INSS (%):
+                <input type="number" id="inss" required>
+            </label><br>
+            <label>ISSQN (%):
+                <input type="number" id="issqn" required>
+            </label><br>
+
             <button type="button" onclick="gerarNota()">Gerar Nota</button>
         </form>
 

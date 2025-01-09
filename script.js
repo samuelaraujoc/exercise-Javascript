@@ -1,11 +1,11 @@
 function gerarNota() {
-    const valorVenda = parseFloat(document.getElementById('valor-venda').value);
-    const itens = document.getElementById('itens').value;
-    const irpf = parseFloat(document.getElementById('irpf').value);
-    const pis = parseFloat(document.getElementById('pis').value);
-    const cofins = parseFloat(document.getElementById('cofins').value);
-    const inss = parseFloat(document.getElementById('inss').value);
-    const issqn = parseFloat(document.getElementById('issqn').value);
+    const valorVenda = parseFloat(document.getElementById("valor-venda").value.replace(/[^\d,]/g, "").replace(",", "."));
+    const itens = document.getElementById("itens").value;
+    const irpf = parseFloat(document.getElementById("irpf").value);
+    const pis = parseFloat(document.getElementById("pis").value);
+    const cofins = parseFloat(document.getElementById("cofins").value);
+    const inss = parseFloat(document.getElementById("inss").value);
+    const issqn = parseFloat(document.getElementById("issqn").value);
 
     const totalImpostos = (valorVenda * (irpf + pis + cofins + inss + issqn)) / 100;
     const total = valorVenda - totalImpostos;
@@ -23,4 +23,12 @@ function gerarNota() {
         </div>
         <p class="total"><strong>Total com Impostos:</strong> R$ ${total.toFixed(2)}</p>
     `;
+}
+
+// Função para formatar o campo "Valor da Venda" como moeda brasileira
+function formatarMoeda(input) {
+    let valor = input.value.replace(/[^\d]/g, ""); 
+    valor = (valor / 100).toFixed(2); 
+    valor = valor.replace(".", ","); 
+    input.value = `R$ ${valor}`; 
 }
