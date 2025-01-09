@@ -11,7 +11,7 @@ function gerarNota() {
     const total = valorVenda - totalImpostos;
 
     document.getElementById('nota-fiscal').innerHTML = `
-        <h3>Nota Fiscal de Serviço (NFS-e)</h3>
+        <h3>Nota Fiscal (NFS-e)</h3>
         <p><strong>Valor da Venda:</strong> R$ ${valorVenda.toFixed(2)}</p>
         <p><strong>Itens Vendidos:</strong> ${itens}</p>
         <div class="itens">
