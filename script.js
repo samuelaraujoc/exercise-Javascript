@@ -12,13 +12,15 @@ function gerarNota() {
         COFINS: (valorVenda * cofins) / 100,
         INSS: (valorVenda * inss) / 100,
         ISSQN: (valorVenda * issqn) / 100
-    };
+    }
 
     const totalImpostos = Object.values(impostos).reduce((acc, val) => acc + val, 0);
     const valorLiquido = valorVenda - totalImpostos;
 
     const notaFiscalDiv = document.getElementById('nota-fiscal');
     notaFiscalDiv.innerHTML = `
+
+                <p>Nota Fical</p>
                 <p>Valor da Venda: R$ ${valorVenda.toFixed(2)}</p>
                 <p>IRPF: R$ ${impostos.IRPF.toFixed(2)}</p>
                 <p>PIS: R$ ${impostos.PIS.toFixed(2)}</p>
@@ -27,5 +29,5 @@ function gerarNota() {
                 <p>ISSQN: R$ ${impostos.ISSQN.toFixed(2)}</p>
                 <p>Total de Impostos: R$ ${totalImpostos.toFixed(2)}</p>
                 <p>Valor Líquido: R$ ${valorLiquido.toFixed(2)}</p>
-            `;
+            `
 }
