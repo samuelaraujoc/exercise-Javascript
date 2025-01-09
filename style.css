@@ -78,3 +78,39 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     width: 300px; 
 }
+
+.nota-fiscal {
+    border: 2px solid #007BFF; 
+    border-radius: 8px; 
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    color: #333; 
+    font-family: Arial, sans-serif; 
+    width: 40%; 
+    margin-top: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.nota-fiscal h3 {
+    text-align: center; 
+    margin-bottom: 20px; 
+    font-size: 20px; 
+    color: #007BFF; 
+}
+
+.nota-fiscal p {
+    margin: 5px 0; 
+    line-height: 1.5; 
+}
+
+.nota-fiscal .itens {
+    margin-top: 15px; 
+    font-weight: bold; 
+}
+
+.nota-fiscal .total {
+    margin-top: 15px; 
+    font-size: 18px; 
+    color: #d9534f; 
+    text-align: right; 
+}
