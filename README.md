@@ -1,6 +1,6 @@
-Exercício Prático:
+# Exercício Prático:
 
-Desenvolva uma página HTML com Javascript que permita:
+## Desenvolva uma página HTML com Javascript que permita:
 A leitura dos dados necessários para a emissão de uma Nota Fiscal de Serviço (NFS-e). 
 Dados de entrada: 
 Valor da Venda, 
